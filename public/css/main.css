@@ -23,6 +23,7 @@ body {
   background-color: hsl(0, 0%, 98%);
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .bg-overlay {
@@ -40,13 +41,14 @@ h2,
 h3 {
   font-weight: 700;
   line-height: 1.1;
-  margin-top: 0;
+  margin: 0;
   color: hsl(0, 0%, 41%);
 }
 
 p {
-  margin-top: 0;
+  margin: 0;
   color: hsl(0, 0%, 41%);
+  line-height: 1.8125rem;
 }
 
 ul {
@@ -226,35 +228,54 @@ button {
   width: 100%;
   padding: 0.75rem;
   border: 2px solid hsl(0, 0%, 41%);
-  border-radius: 0.625rem;
+  border-radius: 0.875rem;
   cursor: pointer;
 }
 
-.hero .hero-img {
-  margin-bottom: 3.0625rem;
-}
-.hero .hero-img img {
-  width: 100%;
-}
-.hero .hero-texts {
+.hero {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  max-width: 700px;
+  margin-inline: auto;
+  padding: 16px;
+}
+.hero .hero-img {
+  flex: 1;
+}
+.hero .hero-img img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 480px;
+  max-height: 640px;
+  display: block;
+  margin-inline: auto;
+}
+.hero .hero-texts {
+  flex: 1;
+  display: flex;
+  gap: 3.0625rem;
+  flex-direction: column;
   align-items: center;
+  margin: 0.4375rem 0;
 }
 .hero .hero-texts h1 {
   font-size: 2.125rem;
   font-weight: 700;
   text-align: center;
   color: hsl(0, 0%, 8%);
-  margin-bottom: 1.6875rem;
 }
 .hero .hero-texts p {
+  font-size: 1.125rem;
   font-weight: 500;
   text-align: center;
   padding: 0 0.9375rem;
 }
 .hero .hero-texts .btn-more {
-  width: 35%;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 50%;
+  padding: 1.1875rem 1.6875rem;
   background-color: hsl(0, 0%, 8%);
   color: hsl(0, 0%, 98%);
   border: 2px solid hsl(0, 0%, 8%);
@@ -265,11 +286,11 @@ button {
   color: hsl(0, 0%, 8%);
 }
 .hero .hero-clients {
-  margin-top: 2.8125rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 0.625rem;
+  flex-wrap: wrap;
+  gap: 2.5625rem;
 }
 .hero .hero-clients img {
   width: 100%;

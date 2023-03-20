@@ -2,35 +2,53 @@
 @use '../globals/' as *;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 700px;
+  margin-inline: auto;
+  padding: 16px;
+
   & .hero-img {
-    margin-bottom: rem(49);
+    flex: 1;
 
     & img {
+      object-fit: cover;
       width: 100%;
+      max-width: 480px;
+      max-height: 640px;
+      display: block;
+      margin-inline: auto;
     }
   }
 
   & .hero-texts {
+    flex: 1;
     display: flex;
+    gap: rem(49);
     flex-direction: column;
     align-items: center;
+    margin: rem(7) 0;
 
     & h1 {
       font-size: rem(34);
       font-weight: 700;
       text-align: center;
       color: $almostBlack;
-      margin-bottom: rem(27);
     }
 
     & p {
+      font-size: rem(18);
       font-weight: 500;
       text-align: center;
       padding: 0 rem(15);
     }
 
     & .btn-more {
-      width: 35%;
+      font-size: rem(18);
+      font-weight: 700;
+      width: 50%;
+      padding: rem(19) rem(27);
       background-color: $almostBlack;
       color: $almostWhite;
       border: 2px solid $almostBlack;
@@ -45,12 +63,11 @@
   }
 
   & .hero-clients {
-    margin-top: rem(45);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    // flex-wrap: wrap;
-    gap: rem(10);
+    flex-wrap: wrap;
+    gap: rem(41);
 
     & img {
       width: 100%;

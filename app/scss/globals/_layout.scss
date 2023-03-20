@@ -9,6 +9,7 @@ body {
   background-color: $almostWhite;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .bg-overlay {
