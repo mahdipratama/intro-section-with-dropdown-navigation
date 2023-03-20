@@ -3,6 +3,7 @@
 
 .nav {
   font-weight: 500;
+  overflow: hidden;
 
   display: flex;
   justify-content: space-between;
@@ -73,6 +74,7 @@
   }
 
   & .wrapper-menu {
+    // display: none;
     font-size: rem(14);
     position: absolute;
     top: 0;
@@ -85,6 +87,7 @@
     transition: right 0.3s ease-in;
 
     &.showMenu {
+      // display: block;
       right: 0;
     }
 

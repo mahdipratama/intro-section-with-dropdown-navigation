@@ -15,15 +15,14 @@ body {
   font-family: "Epilogue", sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: hsl(0, 0%, 98%);
   position: relative;
   overflow-x: hidden;
-}
-@media (max-width: 43.6875rem) {
-  body {
-    overflow-x: hidden;
-  }
 }
 
 .bg-overlay {
@@ -74,6 +73,7 @@ button {
 
 .nav {
   font-weight: 500;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
