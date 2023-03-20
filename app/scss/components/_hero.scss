@@ -47,7 +47,7 @@
     & .btn-more {
       font-size: rem(18);
       font-weight: 700;
-      width: 50%;
+      width: 11rem;
       padding: rem(19) rem(27);
       background-color: $almostBlack;
       color: $almostWhite;
@@ -71,6 +71,56 @@
 
     & img {
       width: 100%;
+    }
+  }
+}
+
+// Tab Size
+@include breakpoint-up(medium) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    gap: 5rem;
+
+    max-width: rem(1228);
+    max-height: 640px;
+    padding: 0;
+    margin: 0 65px 65px;
+
+    & .hero-img img {
+      object-fit: cover;
+      width: 100%;
+      margin: 0;
+    }
+
+    & .hero-texts {
+      height: 520px;
+      justify-content: space-between;
+      // display: grid;
+
+      margin: 0;
+
+      align-self: flex-end;
+      gap: 0;
+
+      & h1 {
+        font-size: 77px;
+        line-height: 0.8;
+        text-align: left;
+        // margin-bottom: 40px;
+      }
+
+      & p {
+        font-size: rem(18);
+        text-align: left;
+        padding: 0;
+      }
+    }
+
+    & .hero-clients {
+      // flex: 1;
+      justify-content: flex-start;
     }
   }
 }
