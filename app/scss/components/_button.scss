@@ -1,0 +1,11 @@
+@use '../utilities/' as *;
+@use '../globals/' as *;
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: rem(12);
+  border: 2px solid $medGray;
+  border-radius: rem(10);
+  cursor: pointer;
+}

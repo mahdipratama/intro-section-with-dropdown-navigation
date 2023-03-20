@@ -1,0 +1,23 @@
+@use '../utilities/' as *;
+@use './colors' as *;
+
+body {
+  background-color: $almostWhite;
+  position: relative;
+  overflow-x: hidden;
+  // min-height: 100vh;
+
+  @include breakpoint-down('small') {
+    overflow-x: hidden;
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+}

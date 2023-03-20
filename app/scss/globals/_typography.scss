@@ -1,0 +1,39 @@
+@use '../utilities' as *;
+@use './colors' as *;
+@use './fonts' as *;
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  color: $medGray;
+}
+
+p {
+  margin-top: 0;
+  color: $medGray;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  color: $medGray;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $medGray;
+}
+
+button {
+  color: $medGray;
+  font-family: $mainFont;
+}
