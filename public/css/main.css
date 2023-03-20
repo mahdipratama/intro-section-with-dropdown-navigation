@@ -68,6 +68,11 @@ a:active {
   color: hsl(0, 0%, 41%);
 }
 
+a:hover {
+  color: hsl(0, 0%, 8%);
+  font-weight: 500;
+}
+
 button {
   color: hsl(0, 0%, 41%);
   font-family: "Epilogue", sans-serif;
@@ -75,12 +80,15 @@ button {
 
 .nav {
   font-weight: 500;
-  overflow: hidden;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
   padding-left: 1rem;
+}
+@media (max-width: 54.3125rem) {
+  .nav {
+    justify-content: space-between;
+  }
 }
 .nav .logo {
   cursor: pointer;
@@ -134,27 +142,39 @@ button {
 }
 .nav .wrapper-menu {
   font-size: 0.875rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -100%;
-  width: 15rem;
-  padding-top: 4.375rem;
-  z-index: 10;
-  background-color: #f4f4f4;
+  background-color: hsl(0, 0%, 98%);
   transition: right 0.3s ease-in;
+}
+@media (max-width: 54.3125rem) {
+  .nav .wrapper-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 15rem;
+    padding-top: 4.375rem;
+    z-index: 10;
+  }
 }
 .nav .wrapper-menu.showMenu {
   right: 0;
 }
 .nav .wrapper-menu .container-list .nav-list {
   display: flex;
-  flex-direction: column;
   gap: 1.5625rem;
   padding-inline: 1.625rem;
 }
+@media (max-width: 54.3125rem) {
+  .nav .wrapper-menu .container-list .nav-list {
+    flex-direction: column;
+  }
+}
 .nav .wrapper-menu .container-list .nav-list .features {
   cursor: pointer;
+}
+.nav .wrapper-menu .container-list .nav-list .features:hover {
+  color: hsl(0, 0%, 8%);
+  font-weight: 500;
 }
 .nav .wrapper-menu .container-list .nav-list .features .chevron {
   transition: transform 0.3s ease-in;
@@ -163,12 +183,15 @@ button {
   transform: rotate(180deg);
 }
 .nav .wrapper-menu .container-list .nav-list .features .features-list {
-  display: flex;
   flex-direction: column;
   gap: 0.9375rem;
-  margin-left: 0.9375rem;
   display: none;
   transition: all 0.3s ease;
+}
+@media (max-width: 54.3125rem) {
+  .nav .wrapper-menu .container-list .nav-list .features .features-list {
+    margin-left: 0.9375rem;
+  }
 }
 .nav .wrapper-menu .container-list .nav-list .features .features-list.showList {
   display: flex;
@@ -185,6 +208,10 @@ button {
 .nav .wrapper-menu .container-list .nav-list .company {
   cursor: pointer;
 }
+.nav .wrapper-menu .container-list .nav-list .company:hover {
+  color: hsl(0, 0%, 8%);
+  font-weight: 500;
+}
 .nav .wrapper-menu .container-list .nav-list .company .chevron {
   transition: transform 0.3s ease-in;
 }
@@ -195,9 +222,13 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.9375rem;
-  margin-left: 0.9375rem;
   display: none;
   transition: all 0.3s ease;
+}
+@media (max-width: 54.3125rem) {
+  .nav .wrapper-menu .container-list .nav-list .company .company-list {
+    margin-left: 0.9375rem;
+  }
 }
 .nav .wrapper-menu .container-list .nav-list .company .company-list.showList {
   display: flex;
@@ -208,10 +239,14 @@ button {
 }
 .nav .wrapper-menu .logins {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 0.8125rem;
-  margin-top: 1.5625rem;
+}
+@media (max-width: 54.3125rem) {
+  .nav .wrapper-menu .logins {
+    flex-direction: column;
+    margin-top: 1.5625rem;
+  }
 }
 .nav .wrapper-menu .logins .btn-regist {
   width: 80%;
@@ -223,6 +258,49 @@ button {
   color: hsl(0, 0%, 98%);
 }
 
+@media (min-width: 54.375rem) {
+  .nav {
+    padding-inline: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .nav .logo {
+    margin-right: 1rem;
+  }
+  .nav .hamburger {
+    display: none;
+  }
+  .nav .wrapper-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  .nav .wrapper-menu .features-list {
+    position: absolute;
+    align-items: stretch;
+    width: 132px;
+    padding: 1.5rem;
+    border-radius: 13px;
+    background-color: hsl(0, 0%, 98%);
+    left: -4%;
+    box-shadow: hsla(0, 0%, 0%, 0.164) 0px 0px 15px 2px;
+    z-index: 10;
+  }
+  .nav .wrapper-menu .company-list {
+    position: absolute;
+    align-items: stretch;
+    width: 107px;
+    padding: 1.5rem;
+    border-radius: 13px;
+    background-color: hsl(0, 0%, 98%);
+    left: 16%;
+    box-shadow: hsla(0, 0%, 0%, 0.164) 0px 0px 15px 2px;
+    z-index: 20;
+  }
+  .nav .wrapper-menu .logins {
+    margin-left: auto;
+  }
+}
 .btn {
   display: inline-block;
   width: 100%;

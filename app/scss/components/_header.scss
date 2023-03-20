@@ -3,10 +3,14 @@
 
 .nav {
   font-weight: 500;
-  overflow: hidden;
+  // overflow: hidden;
 
   display: flex;
-  justify-content: space-between;
+
+  @include breakpoint-down('small') {
+    justify-content: space-between;
+  }
+
   align-items: center;
   padding: rem(16) 0;
   padding-left: rem(16);
@@ -74,16 +78,19 @@
   }
 
   & .wrapper-menu {
-    // display: none;
     font-size: rem(14);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -100%;
-    width: 15rem;
-    padding-top: rem(70);
-    z-index: 10;
-    background-color: #f4f4f4;
+
+    @include breakpoint-down('small') {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      width: 15rem;
+      padding-top: rem(70);
+      z-index: 10;
+    }
+
+    background-color: $almostWhite;
     transition: right 0.3s ease-in;
 
     &.showMenu {
@@ -93,13 +100,21 @@
 
     & .container-list {
       & .nav-list {
+        @include breakpoint-down('small') {
+          flex-direction: column;
+        }
+
         display: flex;
-        flex-direction: column;
         gap: rem(25);
         padding-inline: rem(26);
 
         & .features {
           cursor: pointer;
+
+          &:hover {
+            color: $almostBlack;
+            font-weight: 500;
+          }
 
           & .chevron {
             transition: transform 0.3s ease-in;
@@ -110,10 +125,12 @@
           }
 
           & .features-list {
-            display: flex;
             flex-direction: column;
             gap: rem(15);
-            margin-left: rem(15);
+
+            @include breakpoint-down('small') {
+              margin-left: rem(15);
+            }
 
             // Hide list
             display: none;
@@ -139,6 +156,11 @@
         & .company {
           cursor: pointer;
 
+          &:hover {
+            color: $almostBlack;
+            font-weight: 500;
+          }
+
           & .chevron {
             transition: transform 0.3s ease-in;
 
@@ -151,7 +173,10 @@
             display: flex;
             flex-direction: column;
             gap: rem(15);
-            margin-left: rem(15);
+
+            @include breakpoint-down('small') {
+              margin-left: rem(15);
+            }
 
             // Hide list
             display: none;
@@ -171,11 +196,13 @@
     }
 
     & .logins {
+      @include breakpoint-down('small') {
+        flex-direction: column;
+        margin-top: rem(25);
+      }
       display: flex;
-      flex-direction: column;
       align-items: center;
       gap: rem(13);
-      margin-top: rem(25);
 
       & .btn-regist {
         width: 80%;
@@ -187,6 +214,60 @@
           background-color: $almostBlack;
           color: $almostWhite;
         }
+      }
+    }
+  }
+}
+
+@include breakpoint-up('medium') {
+  .nav {
+    padding-inline: 2.5rem;
+    margin-bottom: 2rem;
+
+    & .logo {
+      margin-right: 1rem;
+    }
+
+    & .hamburger {
+      display: none;
+    }
+
+    .wrapper-menu {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      & .features-list {
+        position: absolute;
+        align-items: stretch;
+        width: 132px;
+        padding: 1.5rem;
+        border-radius: 13px;
+        background-color: $almostWhite;
+        left: -4%;
+
+        box-shadow: hsla(0, 0%, 0%, 0.164) 0px 0px 15px 2px;
+        z-index: 10;
+      }
+
+      & .company-list {
+        position: absolute;
+
+        align-items: stretch;
+        width: 107px;
+        padding: 1.5rem;
+        border-radius: 13px;
+        background-color: $almostWhite;
+        left: 16%;
+
+        box-shadow: hsla(0, 0%, 0%, 0.164) 0px 0px 15px 2px;
+
+        z-index: 20;
+      }
+
+      & .logins {
+        margin-left: auto;
       }
     }
   }

@@ -34,6 +34,11 @@ a:active {
   color: $medGray;
 }
 
+a:hover {
+  color: $almostBlack;
+  font-weight: 500;
+}
+
 button {
   color: $medGray;
   font-family: $mainFont;
